@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izhan Portfolio </title>
+     <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/759c67d46d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo1.png" class="logo">
+            <ul>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web developer</p>
+            <h1>Hey, I'm  <span>Izhan</span> <br>
+                <b>I'm From India </b> 
+            </h1>
+        </div>
+    </div>
+</div>
+<!-------------about-------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="myselfizhan-26-09-2023-0001.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am an IT student , I am eager to secure challenging roles in Information Technology.
+
+                    My studies have provided me with broad proficiency in the use of IT engineering methods, tools, software packages and techniques. Alongside this, I have developed Web Development skills. As such, I am confident that I can make an instant impact in engineering roles.
+                    
+                    I am eager to hear about potential career opportunities, so I would be pleased to chat about job openings in the engineering sphere.
+                    
+                    My key skills include: Web Development</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Web app Development</li>
+                            <li><span>Web Designer</span><br>Web app Designer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">  
+                        <ul>
+                            <li><span>2021 - current/span><br>Web app Development in Jawa center</li>
+                            <li><span>2023 - current</span><br>Internship at CodSoft</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021 - 2024</span><br>Training at Jawa center</li>
+                            <li><span>2021 - 2025</span><br>B.Tech IT from Anna university</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------services--------- --->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1> 
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code-commit"></i>
+                <h2>Web Designer</h2>
+                <p>I have done some real work Experience on designing,
+                     the real web page with some of my freinds web page. </p>
+                    <a href="#">Learn more</a>         
+            </div>
+            <div>
+                <i class="fa-solid fa-pager"></i>
+                <h2>Page Designer</h2>
+                <p>In the page designing it is very much similar to the web page design,
+                    but it contain excel sheets. </p>
+                     <a href="#">Learn more</a>  
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App Designer</h2>
+                <p>Although i don't do it alone beacause in this project i have get,
+                    my team members help to work the design.
+                </p>
+                     <a href="#">Learn more</a>  
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- Portfolio ------
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1> 
+    </div>
+</div>--->
+
+<!-----------contact  ---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> myself@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> 7894561230</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/myselfizhan/#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/izhan-ur-rahman-194323293/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/izhan-rahman"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/my cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright ⓒ Izhan Made this  <i class="fa-regular fa-file"></i> <b>PORTFOLIO</b> </p>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        } 
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link"); 
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ 
+</script>
+</body>
+</html>
